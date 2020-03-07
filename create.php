@@ -46,19 +46,19 @@ if(isset($_POST["create_btn"])){
 	}
     
     //passes $password and hashes it with bcrypt, the array is machine performance cost, 10 is the default and is low expense
-	$hash = password_hash($password, PASSWORD_BCRYPT, array('cost'=>11));
+	//$hash = password_hash($password, PASSWORD_BCRYPT, array('cost'=>11));
     
-	echo $hash;
+	//echo $hash;
 	
     //This set verifies the password
-	if (password_verify($password, $hash)) {
-		if(password_needs_rehash($hash, PASSWORD_DEFAULT, $options)) {
-		$newHash = password_hash($password, PASSWORD_DEFAULT, $options);
-        }
+	//if (password_verify($password, $hash)) {
+	//	if(password_needs_rehash($hash, PASSWORD_DEFAULT, $options)) {
+	//	$newHash = password_hash($password, PASSWORD_DEFAULT, $options);
+     //   }
     	
-	}
+//	}
     // DB query: insert new user into DB using provided credentials.
-	$query = "INSERT INTO user(first_name, last_name, email, username, password) VALUES('$first_name', '$last_name', '$email', '$username', '$hash')";
+	$query = "INSERT INTO user(first_name, last_name, email, username, password) VALUES('$first_name', '$last_name', '$email', '$username', '$password')";
 	// Send the query
     // If successful, redirect to login page.
     if (mysqli_query($conn, $query)) {

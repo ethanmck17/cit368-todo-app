@@ -31,7 +31,19 @@
         $password = $_POST["password"];
         
         //passes $password and hashes it with bcrypt, the array is machine performance cost, 10 is the default and is low expense
-		//$hash = password_hash($password, PASSWORD_BCRYPT, array('cost'=>11));
+        // Hash the entered password
+       // $options = ['cost' => 11];
+        
+       //hash = password_hash($password, PASSWORD_BCRYPT, $options);
+        //This set verifies the password
+        
+        	//echo $hash;
+     //   if (password_verify($password, $hash)) {
+          //  if(password_needs_rehash($hash, PASSWORD_DEFAULT, $options)) {
+         //   $newHash = password_hash($password, PASSWORD_DEFAULT, $options);
+         //   }
+
+      //  }
         
         // Connect to DB
         $conn = mysqli_connect($db_servername, $db_username, $db_password, $db_dbname);
@@ -84,7 +96,7 @@
     	<h2>Todo</h2>
         <h5>Login</h5>
         <form action="login.php" method="post">
-            <?php if ($bad_credentials) { echo "<p>Invalid user credentials.</p>" . $username; } ?>
+            <?php if ($bad_credentials) { echo "<p>Invalid user credentials.</p>"; } ?>
             <input type="text" name="username" placeholder="Username">
             <input type="password" name="password" placeholder="Password">
             <input type="submit" name="login_btn" value="Go &rarr;">
