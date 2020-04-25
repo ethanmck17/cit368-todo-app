@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap');
+/* Fonts */
+body,input,select,option,textarea {
+	font-family: 'Roboto';
+    font-weight: 400;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight: 900;
+}
+/* Elements */
+section {
+	border: 1px solid black;
+    display: inline-block;
+    padding: 2em;
+    margin: 1em;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+	border: 1px solid black;
+    border-style: hidden hidden solid hidden;
+    padding: 1em;
+    transition: all .2s ease;
+}
+form {
+//border: 1px solid red;
+}
+input[type="date"],select{
+   border: 1px solid black;
+    border-style: hidden hidden solid hidden;
+    padding: .95em;
+    transition: all .2s ease;
+}
+select{
+   border: 1px solid black;
+    border-style: hidden hidden solid hidden;
+    padding: 1.1em;
+    transition: all .2s ease;
+}
+
+input[type="text"]:focus,input[type="email"]:focus, input[type="password"]:focus,input[type="date"]:focus, select:focus {
+	border: 1px solid black;
+    border-style: hidden hidden solid hidden;
+    padding: 1em;
+    background-color: #2b2b2b;
+    color: white;
+}
+input[type="submit"] {
+	border: 1px solid black;
+    background-color: white;
+    padding: 1em;
+    transition: all .2s ease;
+}
+input[type="submit"]:hover {
+	border: 1px solid black;
+    background-color: #2b2b2b;
+    color: white;
+    padding: 1em;
+    transition: all .2s ease;
+}
+
+/* Classes */
+.center {
+	text-align: center;
+}
+.inline-block {
+	display: inline-block;
+    margin-left: -1px;
+}
